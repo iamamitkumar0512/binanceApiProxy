@@ -40,8 +40,6 @@ router.get("/marketOHLCVData", async (req: Request, res: any) => {
 
     const response = await axios.get(url);
 
-    console.log(response.data);
-
     const marketOHLCVdata = (response.data as any).map(
       (ohlcvData: KlineData) => ({
         openTime: convertUnixToDateTime(ohlcvData[0]),
