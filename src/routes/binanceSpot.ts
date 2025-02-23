@@ -1,4 +1,4 @@
-import express, { Request, Router } from "express";
+import { Request, Router } from "express";
 //@ts-ignore
 import { Spot } from "@binance/connector";
 import { KlineData } from "../types/spotBinanceOHLCV";

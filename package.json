@@ -16,6 +16,7 @@
     "@types/socket.io": "^3.0.1",
     "@types/ws": "^8.5.14",
     "axios": "^1.7.9",
+    "binance-api-node": "^0.12.9",
     "binance-client": "^3.0.11",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",

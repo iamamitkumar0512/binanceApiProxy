@@ -2,7 +2,8 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { createServer } from "http"; // Move import to the top
-import bianceSpotRoutes from "./routes/binanceSpot";
+import binanceSpotRoutes from "./routes/binanceSpot";
+import binanceFutureRoutes from "./routes/binanceFuture";
 import initializeSocket from "./config/socketConfig";
 import setupProxy from "./services/binanceSocketProxyService";
 
@@ -15,7 +16,8 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json()); // Parse JSON request body
 
-app.use("/api/binance/spot", bianceSpotRoutes);
+app.use("/api/binance/spot", binanceSpotRoutes);
+app.use("/api/binance/future", binanceFutureRoutes);
 
 app.get("/", (req: Request, res: Response) => {
   res.json({ message: "Hello, TypeScript with Express!" });
