@@ -1,5 +1,4 @@
 import { Router } from "express";
-//@ts-ignore
 import Binance from "binance-api-node";
 
 const router = Router();

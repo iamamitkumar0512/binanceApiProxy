@@ -5,7 +5,7 @@ import { createServer } from "http"; // Move import to the top
 import binanceSpotRoutes from "./routes/binanceSpot";
 import binanceFutureRoutes from "./routes/binanceFuture";
 import initializeSocket from "./config/socketConfig";
-import setupProxy from "./services/binanceSocketProxyService";
+import setupProxy from "./proxyWS/binanceSocketProxyService";
 
 dotenv.config(); // Load environment variables
 
